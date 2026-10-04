@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales.html
+
+Sitemap: https://www.stellacoiffure-cindy.fr/sitemap.xml
