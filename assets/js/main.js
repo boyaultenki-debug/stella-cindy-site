@@ -29,6 +29,21 @@
         toggle.setAttribute("aria-expanded", "false");
       }
     });
+    // Fermer avec Échap
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) {
+        document.body.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
+    });
+    // Fermer si on repasse en largeur desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 640 && document.body.classList.contains("menu-open")) {
+        document.body.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   /* ---- Scroll reveal ---- */
